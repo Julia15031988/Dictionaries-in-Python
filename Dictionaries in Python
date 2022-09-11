@@ -1,0 +1,80 @@
+#DICTIONARIES
+
+#1
+
+#the list for creating dictionary
+A=[["Eminem","Without me"], ["Madonna", "Frozen"], ["Pink", "Trouble"]]
+#create the dict on the basic of the list
+writers = dict(A)
+#reflect the dict
+print (writers)
+#adressing to the dictionary item by key
+print ("Eminem wrote a song", writers ["Eminem"])
+#changing meaning of  the item of a dictionary
+writers["Eminem"]="Lose yourself"
+#checking the dictionary
+print ("The dictionary after changing the elements")
+print (writers)
+#adding new element to the dictionary
+writers["Sting"] = "Desert rose"
+#checking the dictionary
+print ("The dictionary after changing the elements")
+print (writers)
+print()
+#sorting elements by the keys
+print ("authors and their songs")
+for s in writers.keys():
+    print ("Author:", s)
+    print ("Song", writers[s])
+    print()
+#create new dictionary
+lights = dict(red="stop", yellow="ready", green="go")
+#checkinh new dictionary
+print ("New dictionary is ")
+print(lights)
+#meaning of key
+color  = "green"
+#adress for item in dict by the key
+print ("If", color, "on the board", lights[color]+ "!")
+print()
+#creating another dict
+girls = {(90,60,90): "Maggy", (85,65,89): "Julia", (92,58.91): "Nina"}
+print ("One more dict")
+print(girls)
+#meaning of the key
+params = (90,60,90)
+print(girls[params]+ ":" , params)
+
+
+#2
+
+#Create a dictionary
+symbs = dict([["a", "first" ], ["b", "Second"]])
+#create second dictionary
+more_symbs=dict([["c", "third"], ["d", "forth"]])
+#adding second dict inti the first
+symbs.update(more_symbs)
+print ("The dictionary is" , symbs)
+#the lenth of the dict
+print ("The number of keys in the dict is :", len(symbs))
+#getting the element by the key
+print( "Element with the c" ,   symbs.get ("c"))
+#chrcking the key in the dict
+print ("the element with the key c", "c" in symbs)
+#delement element from the dict
+del symbs["c"]
+print ("the dict", symbs)
+#getting the element bu the key(there is no key in dict)
+print ("Element with the key c", symbs.get("c", "no such key"))
+#checking if key in dict
+print ("element with key  c", "c" in symbs)
+#the list of keys
+print ("keys of the dict", list(symbs.keys()))
+#the list of elements
+print("elements of the dict", list(symbs.values()))
+#the content of the dict
+print ("The dict", symbs)
+#cleaning of the dict
+symbs.clear()
+#the content of the dict
+print ("The dict", symbs)
